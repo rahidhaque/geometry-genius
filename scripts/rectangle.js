@@ -1,16 +1,17 @@
+function getInputValue(inputField){
+    const inputFieldText= document.getElementById(inputField);
+    const inputValue= parseFloat(inputFieldText.value);
+    return inputValue;
+}
+
+function getArea(areaTextId, area){
+    const areaText= document.getElementById(areaTextId);
+    areaText.innerText= area;
+}
+
 function calculateRectangleArea(){
-    const rectangleWidthInput= document.getElementById('rectangle-width');
-    const rectangleLengthInput= document.getElementById('rectangle-length');
-
-    const width= parseFloat(rectangleWidthInput.value);
-    const length= parseFloat(rectangleLengthInput.value);
-    
-
+    const width= getInputValue('rectangle-width');   
+    const length= getInputValue('rectangle-length');   
     const area= width * length;
-
-    const rectangleAreaText= document.getElementById('rectangle-area');
-    rectangleAreaText.innerText= area;
-
-    rectangleWidthInput.value= "";
-    rectangleLengthInput.value= "";
+    getArea('rectangle-area', area);
 }

@@ -21,7 +21,7 @@
       <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <!-- Triangle Card -->
         <div class="card w-96 border-2 border-gray-700 rounded-md py-12">
-          <figure><img src="images/triangle.png" alt="Shoes" /></figure>
+          <figure><img src="images/triangle.png" alt="Triangle" /></figure>
           <div class="card-body">
             <h2 class="text-center font-bold">Triangle</h2>
             <p class="text-center">Area(A) = 0.5 x b x h</p>
@@ -40,14 +40,22 @@
           </div>
         </div>
         <!-- Rectangle Card -->
-        <div class="card w-96 bg-base-100 shadow-xl">
-          <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" />
-          </figure>
+        <div class="card w-96 border-2 border-gray-700 rounded-md py-12">
+          <figure><img src="images/rectangle.png" alt="Rectangle" /></figure>
           <div class="card-body">
-            <h2 class="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div class="card-actions justify-end">
-              <button class="btn btn-primary">Buy Now</button>
+            <h2 class="text-center font-bold">Rectangle</h2>
+            <p class="text-center">Area(A) = w x l</p>
+            <div class="text-center my-4">
+              <input id="rectangle-width" class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="w">
+              <span>cm</span>
+              <input id="rectangle-length" class="w-24 text-2xl p-2 rounded-sm" type="text" placeholder="l">
+              <span>cm</span>
+              <div>
+                <p class="text-2xl font-semibold mt-2">Area: <span id="rectangle-area"></span><span> cm<sup>2</sup></span></p>
+              </div>
+            </div>
+            <div class="card-actions">
+              <button onclick="calculateRectangleArea()" class="btn btn-primary w-full">Calculate</button>
             </div>
           </div>
         </div>
@@ -71,6 +79,7 @@
     </div>
   </main>
   <script src="scripts/triangle.js"></script>
+  <script src="scripts/rectangle.js"></script>
 </body>
 
 </html>
